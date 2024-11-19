@@ -43,24 +43,17 @@ section[aria-labelledby="inicio"] {
     height: auto; /* Mantiene la proporción de la imagen */
 }
 
-/* Estilos para el encabezado */
 header {
-    background-color: #005a8d;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #2c68ac;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-
-header h1 {
-    margin: 0;
-    font-size: 36px;
-}
-
-/* Estilos para la navegación */
 nav {
     width: 100%; /* Asegura que el nav ocupe el ancho completo */
 }
-
 nav ul {
     display: flex;
     justify-content: flex-start; /* Alinea los elementos a la izquierda */
@@ -75,7 +68,6 @@ nav a {
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease; /* Transición suave para el efecto */
 }
-
 nav a:hover {
     background-color: #1c3b7f; /* Tono de azul oscuro */
     border-radius: 4px; /* Opción para redondear los bordes del efecto hover */
@@ -136,11 +128,10 @@ article img {
 
 /* Pie de página */
 footer {
-    background-color: #005a8d;
-    color: white;
+    background-color: #2c68ac;
+    color: #fff;
+    padding: 1rem;
     text-align: center;
-    padding: 10px 0;
-    position: relative;
 }
 
 footer nav ul {
@@ -161,19 +152,21 @@ footer p {
 
 /* Contenedor para elementos en filas */
 .container {
-    width: 80%;
+    width: 100%;
     margin: 20px auto;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex: 1;
+    padding: 10px;
 }
 
 /* Slider de imágenes */
 .slider {
     width: 100%;
     position: relative;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -186,16 +179,35 @@ footer p {
 .slide {
     width: 100%;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+/* .slide {
+    width: 100%;
+    flex-shrink: 0;
+} */
+
+/* .slide img {
+    width: auto;
+    height: auto;
+    max-height: 700px;
+    border-radius: 8px;
+    cursor: pointer;
+    object-fit: contain;
+    object-position: center;
+} */
 
 .slide img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 700px;
+    object-fit: contain;
+    object-position: center;
     border-radius: 8px;
     cursor: pointer;
 }
 
-/* Botones de navegación del slider */
+/* Botones de navegación del slider
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -217,66 +229,37 @@ footer p {
 .next {
     right: 10px;
 }
-
-/* Modal (Pantalla Completa) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;  /* Aseguramos que la modal esté encima de todo */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding-top: 60px;
-}
-
-.modal-content {
-    display: block;
-    margin: auto;
-    max-width: 90%;
-    max-height: 80%;
-    object-fit: contain;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Botones de navegación en la modal */
-.modal-prev, .modal-next {
+ */
+ /* Navigation buttons for the slider */
+.prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 30px;
+    font-size: 24px;
     border: none;
-    padding: 15px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%;
+    border-radius: 50%; /* Makes the button circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove extra padding for perfect centering */
 }
 
-.modal-prev {
+.prev {
     left: 10px;
 }
 
-.modal-next {
+.next {
     right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
 }
 
 /* Detalles de la propiedad */
@@ -284,6 +267,7 @@ footer p {
     width: 48%;
     background-color: #ffffff;
     padding: 20px;
+    margin: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

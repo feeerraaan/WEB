@@ -1,0 +1,155 @@
+@import url(stylecasas.css);
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%; /* Asegura que html y body ocupen el 100% de la altura */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0;
+}
+
+main {
+    flex: 1; /* Permite que el main crezca y ocupe el espacio disponible */
+    padding: 2rem; /* Mantén el relleno que desees */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0;
+}
+
+
+section[aria-labelledby="inicio"] {
+    background-image: url(/images/home.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#logo_inicio{
+    max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+}
+
+header {
+    background-color: #2c68ac;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+nav {
+    width: 100%; /* Asegura que el nav ocupe el ancho completo */
+}
+nav ul {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    list-style: none;
+    gap: 2rem; /* Aumenta el espacio entre los enlaces */
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease; /* Transición suave para el efecto */
+}
+nav a:hover {
+    background-color: #1c3b7f; /* Tono de azul oscuro */
+    border-radius: 4px; /* Opción para redondear los bordes del efecto hover */
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+/* Sección de búsqueda y filtros */
+section[aria-labelledby="menu-title"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+input[type="text"],
+select,
+button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Sección de propiedades */
+section[aria-labelledby="properties-title"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Alinea las tarjetas al centro horizontalmente */
+}
+article {
+    background-color: #2c68ac;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: #2c68ac;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+}
+
+footer nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
